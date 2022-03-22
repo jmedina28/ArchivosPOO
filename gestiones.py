@@ -1,4 +1,4 @@
-#Primera parte:
+# Primera parte:
 def listadiccionarios(calificaciones):
     separador = ";"
     with open(calificaciones, encoding="UTF8") as tabla:
@@ -13,11 +13,11 @@ def listadiccionarios(calificaciones):
             Ordinario1, Ordinario2 = columna[5], columna[6]
             Practicas, OrdinarioPracticas = columna[7], columna[8]
             alumnado.append({
-                "Apellidos": Apellidos,"Nombre": Nombre,
+                "Apellidos": Apellidos, "Nombre": Nombre,
                 "Asistencia": Asistencia,
-                "Parcial 1": Parcial1,"Parcial 2": Parcial2,
-                "Ordinario 1": Ordinario1,"Ordinario 2": Ordinario2,
-                "Prácticas": Practicas,"Ordinario Prácticas": OrdinarioPracticas,
+                "Parcial 1": Parcial1, "Parcial 2": Parcial2,
+                "Ordinario 1": Ordinario1, "Ordinario 2": Ordinario2,
+                "Prácticas": Practicas, "Ordinario Prácticas": OrdinarioPracticas,
             })
         return alumnado
 
@@ -32,21 +32,32 @@ for i in range(len(lista)):
 Aprobados, Suspensos = [], []
 
 for i in range(len(lista)):
-    if float(lista[i]["Asistencia"]) >= 75 and float(lista[i]["Nota final"])>=5 and float(lista[i]["Parcial 1"]) >= 4 and float(lista[i]["Parcial 2"]) >= 4:
+    if float(lista[i]["Asistencia"]) >= 75 and float(lista[i]["Nota final"]) >= 5 and float(lista[i]["Parcial 1"]) >= 4 and float(lista[i]["Parcial 2"]) >= 4:
         Aprobados.append(lista[i])
     else:
         Suspensos.append(lista[i])
 
-print("La lista de suspensos es la siguiente:\n ")
+print("\nLa lista de suspensos es la siguiente:\n ")
+
+
 def listasuspensos():
     for i in range(len(Suspensos)):
-        if Suspensos[i]["Nota final"] >=5: 
-            print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + " con una nota final de: 4")
+        if Suspensos[i]["Nota final"] >= 5:
+            print(Suspensos[i]["Nombre"], Suspensos[i]
+                  ["Apellidos"] + " con una nota final de: 4")
         else:
-            print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + " con una nota final de: " +str(Suspensos[i]["Nota final"]))
+            print(Suspensos[i]["Nombre"], Suspensos[i]["Apellidos"] +
+                  " con una nota final de: " + str(Suspensos[i]["Nota final"]))
     print("\n\nLa lista de aprobados es la siguiente: \n")
+
+
 listasuspensos()
+
+
 def listaaprobados():
     for i in range(len(Aprobados)):
-        print(Aprobados[i]["Nombre"],Aprobados[i]["Apellidos"] + " con una nota final de: " +str(Aprobados[i]["Nota final"]))
+        print(Aprobados[i]["Nombre"], Aprobados[i]["Apellidos"] +
+              " con una nota final de: " + str(Aprobados[i]["Nota final"]))
+
+
 listaaprobados()
