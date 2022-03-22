@@ -38,4 +38,4 @@ for i in range(len(lista)):
         Suspensos.append(lista[i])
 print("La lista de aprobados es la siguiente: " + str(Aprobados))
 print("\nLa lista de suspensos es la siguiente: " + str(Suspensos))
-print(Suspensos[0]["Nombre"],Suspensos[0]["Apellidos"])
+print(Suspensos[0]["Nombre"],Suspensos[0]["Apellidos"] + "con una nota final de: " + str(notafinal))
