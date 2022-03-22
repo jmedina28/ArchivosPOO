@@ -26,4 +26,5 @@ def listadiccionarios(calificaciones):
         return alumnado
 
 lista = listadiccionarios("calificaciones.csv")
-print(lista)
+lista[0]["Nota final"] = 5
+print(lista[0]["Nombre"])
