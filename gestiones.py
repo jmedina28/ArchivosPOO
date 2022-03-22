@@ -1,6 +1,28 @@
-p = 0
-calificaciones = open("calificaciones.csv", "r")
-prueba = calificaciones.readline()
-for i in range(16):
-    prueba = calificaciones.readline().split(";")
-    print(prueba)
+
+def listadiccionarios(calificaciones):
+    separador = ";"
+    with open(calificaciones) as tabla:
+        next(tabla)  
+        alumnado = []
+        for linea in tabla:
+            linea = linea.rstrip("\n") 
+            columna = linea.split(separador)
+            Apellidos, Nombre = columna[0], columna[1]
+            Asistencia = columna[2]
+            Parcial1, Parcial2 = columna[3],columna[4]
+            Ordinario1, Ordinario2 = columna[5], columna[6]
+            Practicas, OrdinarioPracticas = columna[7], columna[8]
+            alumnado.append({
+                "Apellidos": Apellidos,
+                "Nombre": Nombre,
+                "Asistencia": Asistencia,
+                "Parcial 1": Parcial1,
+                "Parcial 2": Parcial2,
+                "Ordinario 1": Ordinario1,
+                "Ordinario 2": Ordinario2,
+                "Prácticas": Practicas,
+                "Ordinario Prácticas": OrdinarioPracticas,
+            })
+        return alumnado
+
+print(listadiccionarios("calificaciones.csv"))
