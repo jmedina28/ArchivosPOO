@@ -25,4 +25,5 @@ def listadiccionarios(calificaciones):
             })
         return alumnado
 
-print(listadiccionarios("calificaciones.csv"))
+lista = listadiccionarios("calificaciones.csv")
+print(lista)
