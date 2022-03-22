@@ -31,12 +31,11 @@ lista = listadiccionarios("calificaciones.csv")
 for i in range(len(lista)):
     lista[i]["Nota final"] = (float(lista[i]["Parcial 1"])*0.3)+(
         float(lista[i]["Parcial 2"])*0.3)+(float(lista[i]["Ordinario Prácticas"])*0.4)
-listacopia = lista
 print(lista)
 # Tercera parte:
 Aprobados = []
 Suspensos = []
-for i in range(len(listacopia)):
+for i in range(len(lista)):
     if float(lista[i]["Asistencia"]) >= 75 and float(lista[i]["Nota final"])>=5 and float(lista[i]["Parcial 1"]) >= 4 and float(lista[i]["Parcial 2"]) >= 4:
         Aprobados.append(lista[i])
     else:
