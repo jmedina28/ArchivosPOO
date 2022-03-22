@@ -26,7 +26,10 @@ def listadiccionarios(calificaciones):
         return alumnado
 
 lista = listadiccionarios("calificaciones.csv")
-lista[0]["Nota final"] = 5
-print(lista[0]["Nombre"])
-print(lista[0]["Nombre"])
+
+for i in range(len(lista)):
+    lista[i]["Nota final"] = int(lista[i]["Parcial 1"])*0.3 + int(lista[i]["Parcial 2"])*0.3 + int(lista[i]["Ordinario Prácticas"])*0.4
+
+
+
 
