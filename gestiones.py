@@ -34,3 +34,10 @@ for i in range(len(lista)):
 
 print(lista)
 # Tercera parte:
+Aprobados = []
+Suspensos = []
+for i in range(len(lista)):
+    if lista[i]["Asistencia"] >= 75 and float(lista[i]["Nota final"])>=5 and float(lista[i]["Parcial 1"]) >= 4 and float(lista[i]["Parcial 2"]) >= 4:
+        Aprobados.append(lista.pop(i))
+    else:
+        Suspensos.append(lista.pop(i))
