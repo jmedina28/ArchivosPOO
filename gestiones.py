@@ -38,6 +38,8 @@ for i in range(len(lista)):
         Suspensos.append(lista[i])
 
 
+Suspensos= sorted(Suspensos, key=lambda k: k["Nombre"])
+Aprobados= sorted(Aprobados, key=lambda k: k["Nombre"])
 
 
 def listasuspensos():
@@ -49,15 +51,19 @@ def listasuspensos():
         else:
             print(Suspensos[i]["Nombre"], Suspensos[i]["Apellidos"] +
                   " con una nota final de: " + str(Suspensos[i]["Nota final"]))
+    print("\n" + str(Suspensos))
 
 def listaaprobados():
     print("\n\nLa lista de aprobados es la siguiente: \n")
     for i in range(len(Aprobados)):
         print(Aprobados[i]["Nombre"], Aprobados[i]["Apellidos"] +
               " con una nota final de: " + str(Aprobados[i]["Nota final"]))
+    print("\n" + str(Aprobados))
 
 def listageneral():
     General = Aprobados + Suspensos
+    General= sorted(General, key=lambda k: k["Nombre"])
     for i in range(len(General)):
         print(General[i]["Nombre"], General[i]["Apellidos"] +
               " con una nota final de: " + str(General[i]["Nota final"]))
+    print("\n" + str(General))
