@@ -31,7 +31,7 @@ lista = listadiccionarios("calificaciones.csv")
 for i in range(len(lista)):
     lista[i]["Nota final"] = (float(lista[i]["Parcial 1"])*0.3)+(
         float(lista[i]["Parcial 2"])*0.3)+(float(lista[i]["Ordinario Prácticas"])*0.4)
-print(lista)
+
 # Tercera parte:
 Aprobados = []
 Suspensos = []
@@ -41,4 +41,4 @@ for i in range(len(lista)):
     else:
         Suspensos.append(lista[i])
 print("La lista de aprobados es la siguiente: " + str(Aprobados))
-print("La lista de suspensos es la siguiente: " + str(Suspensos))
+print("\nLa lista de suspensos es la siguiente: " + str(Suspensos))
