@@ -27,4 +27,8 @@ def listadiccionarios(calificaciones):
 
 lista = listadiccionarios("calificaciones.csv")
 lista[0]["Nota final"] = 5
+<<<<<<< HEAD
 print(lista[0]["Nombre"])
+=======
+print(lista[0]["Nombre"])
+>>>>>>> 865b8dbe7de81714a1fc7e106bca5326690d2fcd
