@@ -36,10 +36,13 @@ for i in range(len(lista)):
         Aprobados.append(lista[i])
     else:
         Suspensos.append(lista[i])
-print("La lista de aprobados es la siguiente: " + str(Aprobados))
-print("\nLa lista de suspensos es la siguiente: ")
+
+print("La lista de suspensos es la siguiente:\n ")
 for i in range(len(Suspensos)):
     if Suspensos[i]["Nota final"] >=5: 
-        print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + "con una nota final de: 4")
+        print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + " con una nota final de: 4")
     else:
-        print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + "con una nota final de: " +str(Suspensos[i]["Nota final"]))
+        print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + " con una nota final de: " +str(Suspensos[i]["Nota final"]))
+print("\n\nLa lista de aprobados es la siguiente: \n")
+for i in range(len(Aprobados)):
+    print(Aprobados[i]["Nombre"],Aprobados[i]["Apellidos"] + " con una nota final de: " +str(Aprobados[i]["Nota final"]))
