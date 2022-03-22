@@ -66,6 +66,10 @@ def listageneral():
     General = Aprobados + Suspensos
     General = sorted(General, key=lambda k: k["Nombre"])
     for i in range(len(General)):
-        print(General[i]["Nombre"], General[i]["Apellidos"] +
-              " con una nota final de: " + str(General[i]["Nota final"]))
+        if float(General[i]["Asistencia"]) >= 75 and float(General[i]["Nota final"]) >= 5 and float(General[i]["Parcial 1"]) >= 4 and float(General[i]["Parcial 2"]) >= 4:
+            print(General[i]["Nombre"], General[i]["Apellidos"] +
+                " con una nota final de: " + str(General[i]["Nota final"]) + " APROBADO")
+        else:
+            print(General[i]["Nombre"], General[i]["Apellidos"] +
+                " con una nota final de: " + str(General[i]["Nota final"]) + " SUSPENSO")
     print("\n" + str(General))
