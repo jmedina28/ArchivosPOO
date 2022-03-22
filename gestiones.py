@@ -38,7 +38,7 @@ Aprobados = []
 Suspensos = []
 for i in range(len(listacopia)):
     if float(lista[i]["Asistencia"]) >= 75 and float(lista[i]["Nota final"])>=5 and float(lista[i]["Parcial 1"]) >= 4 and float(lista[i]["Parcial 2"]) >= 4:
-        Aprobados.append(lista.pop(i))
+        Aprobados.append(lista[i])
     else:
-        Suspensos.append(lista.pop(i))
-print(Aprobados, Suspensos)
+        Suspensos.append(lista[i])
+print("La lista de aprobados es la siguiente: " + str(Aprobados))
