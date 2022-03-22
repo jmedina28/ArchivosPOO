@@ -28,8 +28,8 @@ def listadiccionarios(calificaciones):
 lista = listadiccionarios("calificaciones.csv")
 print(lista)
 for i in range(len(lista)):
-    hola = float(lista[i]["Parcial 1"])*0.2
-    print(hola)
+    lista[i]["Nota final"] = (float(lista[i]["Parcial 1"])*0.3)+(float(lista[i]["Parcial 2"])*0.3)+(float(lista[i]["Ordinario Prácticas"])*0.4)
+    print(lista[i]["Nota final"])
 
 
 
