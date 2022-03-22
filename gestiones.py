@@ -41,3 +41,4 @@ for i in range(len(lista)):
     else:
         Suspensos.append(lista[i])
 print("La lista de aprobados es la siguiente: " + str(Aprobados))
+print("La lista de suspensos es la siguiente: " + str(Suspensos))
