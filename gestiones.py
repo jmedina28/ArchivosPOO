@@ -27,7 +27,7 @@ def listadiccionarios(calificaciones):
 
 lista = listadiccionarios("calificaciones.csv")
 print(lista)
-for i in range(5):
+for i in range(len(lista)):
     hola = float(lista[i]["Parcial 1"])*0.2
     print(hola)
 
