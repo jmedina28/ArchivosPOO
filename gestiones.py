@@ -62,6 +62,7 @@ def listaaprobados():
 
 
 def listageneral():
+    print("\nLa lista general es la siguiente:\n ")
     General = Aprobados + Suspensos
     General = sorted(General, key=lambda k: k["Nombre"])
     for i in range(len(General)):
