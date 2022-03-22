@@ -1,7 +1,7 @@
 #Primera parte:
 def listadiccionarios(calificaciones):
     separador = ";"
-    with open(calificaciones) as tabla:
+    with open(calificaciones, encoding="UTF8") as tabla:
         next(tabla)
         alumnado = []
         for linea in tabla:
@@ -38,11 +38,15 @@ for i in range(len(lista)):
         Suspensos.append(lista[i])
 
 print("La lista de suspensos es la siguiente:\n ")
-for i in range(len(Suspensos)):
-    if Suspensos[i]["Nota final"] >=5: 
-        print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + " con una nota final de: 4")
-    else:
-        print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + " con una nota final de: " +str(Suspensos[i]["Nota final"]))
-print("\n\nLa lista de aprobados es la siguiente: \n")
-for i in range(len(Aprobados)):
-    print(Aprobados[i]["Nombre"],Aprobados[i]["Apellidos"] + " con una nota final de: " +str(Aprobados[i]["Nota final"]))
+def listasuspensos():
+    for i in range(len(Suspensos)):
+        if Suspensos[i]["Nota final"] >=5: 
+            print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + " con una nota final de: 4")
+        else:
+            print(Suspensos[i]["Nombre"],Suspensos[i]["Apellidos"] + " con una nota final de: " +str(Suspensos[i]["Nota final"]))
+    print("\n\nLa lista de aprobados es la siguiente: \n")
+listasuspensos()
+def listaaprobados():
+    for i in range(len(Aprobados)):
+        print(Aprobados[i]["Nombre"],Aprobados[i]["Apellidos"] + " con una nota final de: " +str(Aprobados[i]["Nota final"]))
+listaaprobados()
