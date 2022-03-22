@@ -1,4 +1,4 @@
-
+#Primera parte:
 def listadiccionarios(calificaciones):
     separador = ";"
     with open(calificaciones) as tabla:
@@ -27,9 +27,10 @@ def listadiccionarios(calificaciones):
 
 
 lista = listadiccionarios("calificaciones.csv")
-
+# Segunda parte:
 for i in range(len(lista)):
     lista[i]["Nota final"] = (float(lista[i]["Parcial 1"])*0.3)+(
         float(lista[i]["Parcial 2"])*0.3)+(float(lista[i]["Ordinario Prácticas"])*0.4)
 
 print(lista)
+# Tercera parte:
