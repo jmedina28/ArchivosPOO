@@ -2,14 +2,14 @@
 def listadiccionarios(calificaciones):
     separador = ";"
     with open(calificaciones) as tabla:
-        next(tabla)  
+        next(tabla)
         alumnado = []
         for linea in tabla:
-            linea = linea.rstrip("\n") 
+            linea = linea.rstrip("\n")
             columna = linea.split(separador)
             Apellidos, Nombre = columna[0], columna[1]
             Asistencia = columna[2]
-            Parcial1, Parcial2 = columna[3],columna[4]
+            Parcial1, Parcial2 = columna[3], columna[4]
             Ordinario1, Ordinario2 = columna[5], columna[6]
             Practicas, OrdinarioPracticas = columna[7], columna[8]
             alumnado.append({
@@ -25,9 +25,11 @@ def listadiccionarios(calificaciones):
             })
         return alumnado
 
+
 lista = listadiccionarios("calificaciones.csv")
 
 for i in range(len(lista)):
-    lista[i]["Nota final"] = (float(lista[i]["Parcial 1"])*0.3)+(float(lista[i]["Parcial 2"])*0.3)+(float(lista[i]["Ordinario Prácticas"])*0.4)
-    
+    lista[i]["Nota final"] = (float(lista[i]["Parcial 1"])*0.3)+(
+        float(lista[i]["Parcial 2"])*0.3)+(float(lista[i]["Ordinario Prácticas"])*0.4)
+
 print(lista)
