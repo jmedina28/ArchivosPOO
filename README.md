@@ -8,7 +8,7 @@ En este [repositorio](https://github.com/jmedina28/ArchivosPOO) quedan resuelto 
 ***
 ## Ejercicio Archivos
 
-En este ejercicio he pasado de tener un archivo .csv a tener una lista de diccionarios, la cual posteriormente he dividido en un listad general, uno de aprobados y otro de suspensos. Para realizar este ejercicio me he documentado especialmente de cara a convertir el .csv en una lista de diccionarios.
+En este ejercicio he pasado de tener un archivo .csv a tener una lista de diccionarios, la cual posteriormente he dividido en un listado general, uno de aprobados y otro de suspensos. Para realizar este ejercicio me he documentado especialmente de cara a convertir el .csv en una lista de diccionarios.
 
 El código empleado para resolverlo es el siguiente: 
 
