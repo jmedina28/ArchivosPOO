@@ -55,3 +55,9 @@ def listaaprobados():
     for i in range(len(Aprobados)):
         print(Aprobados[i]["Nombre"], Aprobados[i]["Apellidos"] +
               " con una nota final de: " + str(Aprobados[i]["Nota final"]))
+
+def listageneral():
+    General = Aprobados + Suspensos
+    for i in range(len(General)):
+        print(General[i]["Nombre"], General[i]["Apellidos"] +
+              " con una nota final de: " + str(General[i]["Nota final"]))
