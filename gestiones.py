@@ -64,7 +64,7 @@ def listaaprobados():
 def listageneral():
     print("\nLa lista general ordenada alfabéticamente por apellidos es la siguiente:\n ")
     General = Aprobados + Suspensos
-    General = sorted(General, key=lambda k: k["Nombre"])
+    General = sorted(General, key=lambda k: k["Apellidos"])
     for i in range(len(General)):
         if float(General[i]["Asistencia"]) >= 75 and float(General[i]["Nota final"]) >= 5 and float(General[i]["Parcial 1"]) >= 4 and float(General[i]["Parcial 2"]) >= 4:
             print(General[i]["Nombre"], General[i]["Apellidos"] +
