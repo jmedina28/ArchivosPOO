@@ -1,8 +1,10 @@
 import pandas as pd
 
-tabla = pd.read_csv("calificaciones.csv", encoding = "UTF8", sep = ";")
-print(tabla)
 # Primera parte:
+def tabla():
+    tabla = pd.read_csv("calificaciones.csv", encoding = "UTF8", sep = ";")
+    print(tabla)
+
 def listadiccionarios(calificaciones):
     separador = ";"
     with open(calificaciones, encoding="UTF8") as tabla:
