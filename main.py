@@ -9,7 +9,7 @@ def eleccion():
     elif variable == 2:
         listasuspensos()
     elif variable == 3:
-        listageneral()
+        listageneral() # Esta función devuelve la lista de diccionarios que se busca.
     elif variable == 4:
         tabla()
     else:
